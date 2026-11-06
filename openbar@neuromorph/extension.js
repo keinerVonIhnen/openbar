@@ -392,7 +392,8 @@ export default class Openbar extends Extension {
                             clearBtn = msgHbox.get_child_at_index(2);
                         }
                         else {
-                            clearBtn = msgHbox.get_child_at_index(1);
+                            // GNOME 49+: DND moved to Quick Settings, Clear is the only child
+                            clearBtn = msgHbox.get_child_at_index(0);
                         }
                         this.applyMenuClass(clearBtn, add);
 
